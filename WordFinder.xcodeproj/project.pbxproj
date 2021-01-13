@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		585AA0A825AE84CC00D5F5A5 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585AA0A725AE84CC00D5F5A5 /* main.swift */; };
+		585AA0B025AE84DC00D5F5A5 /* WordFinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 585AA0AF25AE84DC00D5F5A5 /* WordFinder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		585AA0A425AE84CC00D5F5A5 /* WordFinder */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = WordFinder; sourceTree = BUILT_PRODUCTS_DIR; };
 		585AA0A725AE84CC00D5F5A5 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		585AA0AF25AE84DC00D5F5A5 /* WordFinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFinder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				585AA0A725AE84CC00D5F5A5 /* main.swift */,
+				585AA0AF25AE84DC00D5F5A5 /* WordFinder.swift */,
 			);
 			path = WordFinder;
 			sourceTree = "<group>";
@@ -120,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				585AA0A825AE84CC00D5F5A5 /* main.swift in Sources */,
+				585AA0B025AE84DC00D5F5A5 /* WordFinder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
