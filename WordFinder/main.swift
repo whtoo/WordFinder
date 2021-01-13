@@ -21,9 +21,12 @@ struct Wordlasso {
             findAndPrintMatches(for: template, using: wordFinder)
 
         } else {
-            print("Enter word template: ",terminator: "")
-            template = readLine() ?? ""
-            findAndPrintMatches(for: template, using: wordFinder)
+            while true {
+                print("Enter word template: ",terminator: "")
+                let template = readLine() ?? ""
+                if template.isEmpty { return }
+                findAndPrintMatches(for: template, using: wordFinder)
+            }
         }
     }
     private func findAndPrintMatches(for template: String,
