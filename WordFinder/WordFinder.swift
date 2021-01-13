@@ -12,7 +12,13 @@ struct WordFinder {
     let wordlist: [String]
     
     private func isMatch(template: String,with word: String) -> Bool {
-        return true
+        guard template.count == word.count else {
+            return false
+        }
+        
+        return template.indices.allSatisfy { index in
+            template[index] == WordFinder.wildcard || template[index] == word[index]
+        }
     }
     
     func findMatches(for template: String) -> [String] {
