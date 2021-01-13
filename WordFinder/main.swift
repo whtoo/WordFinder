@@ -15,7 +15,13 @@ struct Wordlasso {
         let args = CommandLine.arguments
         print("Command-line arguments: \(args)")
         
-        let template = "wo.."
+        let template: String
+        if args.count > 1 {
+            template = args[1]
+        } else {
+            template = ""
+            #warning("Ask the user for input interactively")
+        }
         let matches = wordFinder.findMatches(for: template)
         print("Found \(matches.count) \(matches.count == 1 ? "match" : "matches"):")
         for match in matches {
