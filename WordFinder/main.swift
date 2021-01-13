@@ -18,12 +18,13 @@ struct Wordlasso {
         let template: String
         if args.count > 1 {
             template = args[1]
+            findAndPrintMatches(for: template, using: wordFinder)
+
         } else {
             print("Enter word template: ",terminator: "")
             template = readLine() ?? ""
-            
+            findAndPrintMatches(for: template, using: wordFinder)
         }
-        findAndPrintMatches(for: template, using: wordFinder)
     }
     private func findAndPrintMatches(for template: String,
                                      using wordFinder: WordFinder){
