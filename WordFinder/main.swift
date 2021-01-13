@@ -19,9 +19,14 @@ struct Wordlasso {
         if args.count > 1 {
             template = args[1]
         } else {
-            template = ""
-            #warning("Ask the user for input interactively")
+            print("Enter word template: ",terminator: "")
+            template = readLine() ?? ""
+            
         }
+        findAndPrintMatches(for: template, using: wordFinder)
+    }
+    private func findAndPrintMatches(for template: String,
+                                     using wordFinder: WordFinder){
         let matches = wordFinder.findMatches(for: template)
         print("Found \(matches.count) \(matches.count == 1 ? "match" : "matches"):")
         for match in matches {
