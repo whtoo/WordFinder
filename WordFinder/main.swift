@@ -9,8 +9,8 @@ import Foundation
 
 struct Wordlasso {
     func run() throws {
-        let wordList = ["Wolf","wolf","word","works","woo"]
-        let wordFinder = WordFinder(wordlist: wordList)
+        let wordListPath = "/usr/share/dict/words"
+        let wordFinder = try WordFinder(wordListPath: wordListPath, ignoreCase: true)
         
         let template = "wo.."
         let matches = wordFinder.findMatches(for: template)
