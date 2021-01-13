@@ -12,6 +12,9 @@ struct Wordlasso {
         let wordListPath = "/usr/share/dict/words"
         let wordFinder = try WordFinder(wordListPath: wordListPath, ignoreCase: true)
         
+        let args = CommandLine.arguments
+        print("Command-line arguments: \(args)")
+        
         let template = "wo.."
         let matches = wordFinder.findMatches(for: template)
         print("Found \(matches.count) \(matches.count == 1 ? "match" : "matches"):")
